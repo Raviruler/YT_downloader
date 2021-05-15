@@ -3,8 +3,8 @@
 #### using API
 
 ## Language Used
-`HTML`
-`CSS`
+`HTML` <br>
+`CSS` <br>
 `Js`
 
 ## API Provider
