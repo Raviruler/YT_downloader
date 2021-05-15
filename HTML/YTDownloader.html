@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://freepngimg.com/thumb/youtube/24731-6-youtube-play-button-free-download.png">
+    <title>YT video Downloader</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        #sticky-footer {
+            flex-shrink: none;
+            margin-bottom: 0%;
+            background-color:rgba(0, 0, 0, 0.8);
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            margin-bottom: 0;
+            margin-top: 16.5%;
+        }
+    </style>
+</head>
+
+<body
+    style="background: rgb(221,174,238);
+             background: radial-gradient(circle, rgba(221,174,238,0.6759909297643083) 55%, rgba(148,187,233,0.8136313792025105) 100%);">
+    <div class="container text-center" style="margin-top: 5%;">
+        <div>
+            <h1 class="h1 display-1 shadow-lg p-3 mb-5 bg-body rounded"> <span class="badge badge-danger">YouTube</span>
+                Downloader</h1>
+            <figcaption class="blockquote-footer">
+                using API <cite title="Source Title"><span><a href="https://loader.to/"
+                            class="text-success">Loader.to</a></span></cite>
+            </figcaption>
+        </div>
+
+        <div class="d-flex justify-content-center" style="margin-top: 30px;">
+            <div class="col-md-6 ">
+                <label class="form-label"><b>Online Videos Link:</b></label>
+                <input type="text" name="link" class="form-control link" required>
+            </div>
+
+
+            <div class="col-md-6">
+
+                <label class="form-label"><b>Select download Formate:</b></label>
+                <select class="form-control formte" required>
+                    <option selected disabled>Select Formate</option>
+                    <option value="mp3">Mp3</option>
+                  <option value="mp4a">144</option>
+                  <option value="360">360</option>
+                  <option value="480">480</option>
+                  <option value="720">720</option>
+                </select>
+
+            </div>
+        </div>
+
+        <div class="d-grid gap-2 col-md-12 download-video" style="margin-top: 20px;">
+            <button class="btn btn-success btn-block click-btn-down btn-lg " style="padding: 20px;font-size:xx-large; "
+                type="submit">Submit</button>
+        </div>
+
+
+
+
+    </div>
+
+    <footer id="sticky-footer">
+        <div class="container text-center">
+          <small>Made with <span style="color:red;">&hearts;</span> | Copyright &copy; </small>
+        </div>
+      </footer>
+
+</body>
+
+<script type="text/javascript">
+    $( ".click-btn-down" ).click( function () {
+      var link = $( ".link" ).val();
+      var fromate = $( ".formte" ).children( "option:selected" ).val();
+      var src = "" + link + "=" + fromate + "";
+      downloadVideo( link, fromate );
+    } );
+  
+    function downloadVideo( link, fromate ) {
+      $( '.download-video' ).html(
+        '<iframe style="width:100%;height:100px;border:0;overflow:hidden;" scrolling="no" src="https://loader.to/api/button/?url='+link+'&f='+fromate +'"></iframe>' );
+    }
+  </script>
+
+</html>
