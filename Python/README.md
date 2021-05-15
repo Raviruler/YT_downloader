@@ -9,5 +9,5 @@ YouTube video downloader using Python
 `pytube`
 
 ## Import Libraries
-> `from tkinter import *`
-> `from pytube import YouTube`
+> from tkinter import * <br>
+> from pytube import YouTube
